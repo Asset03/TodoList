@@ -1,38 +1,180 @@
-.App {
-  text-align: center;
+body{
+    background: #855AFD;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.card{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 60px;
+    padding: 35px 20px;
+    background: #1C1A42;
+}
+.card__block{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.title{
+    color: white;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+}
+.form{
+    width: 90%;
+    margin: 0 auto;
+    padding: 25px;
+    background: white;
+    width: 50%;
+}
+.form__input{
+    font-size: inherit;
+    padding:14px;
+    width: 100%;
+    border: 1px solid rgba(130,88,248,.5);
+    background: transparent;
+    color: black;
+    margin-bottom: 20px;
+}
+.form__input:focus{
+    border-color: rgba(130,88,248,1);
+    outline: none;
+    color: black;
+}
+.form__button{
+    float: right;
+    font-size: inherit;
+    width: 20%;
+    padding: 15px;
+    color: white;
+    background:#855AFD;
+    border: none;
+}
+.list{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    background:#855AFD;
+    color: white;
+    padding: 15px;
+    align-items: center;
+}
+.item_done{
+    background: rgba(130,88,248,.5);
+    text-decoration: line-through;
+    color: rgba(255,255,255,.5);
+}
+.item__title{
+    text-align: start;
+    font-size: inherit;
+}
+.item__actions{
+    display: flex;
+    gap: 20px;
+}
+.custom__icon{
+    font-size: 24px;
+}
+/* +++++++++++++++++ */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.pagination > p{
+    border: 1px solid rgba(130,88,248,.5);
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+.page_active{
+    background-color: #855AFD;
+}
+.pagination > p:hover{
+    background-color: #855AFD;
+}
+/* ++++++++++++++ */
+.sort-filter{
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sort-block{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.sort__selector{
+    width: 50%;
+    font-size: 18px;
+    background: #855AFD;    
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+.sort__selector:focus{
+    outline: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sort__selector > option {
+    background: #1C1A42;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.filter-block{
+    position: relative;
 }
+.filter__icon{
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 10px;
+    color: gray;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.filter__input{
+    float: left;
+    width: 65%;
+    padding: 10px;
+    font-size: inherit;
+    border: 1px solid rgba(130,88,248,.5);
+    background: transparent;
+    color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter__input:focus{
+    border-color: rgba(130,88,248,1);
+    outline: none;
+    color: white;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0, 0.5);
+    z-index: 100;
+    align-items: center;
+}
+.button{
+    font-size: inherit;
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+    color: white;
+    background:#855AFD;
+    border: none;
 }
